@@ -70,18 +70,18 @@ var dependencies = [
 ];
 
 if (EventPluginUtils.useTouchEvents) {
-  dependencies.push(
+  dependencies = [
     topLevelTypes.topTouchCancel,
     topLevelTypes.topTouchEnd,
     topLevelTypes.topTouchStart,
     topLevelTypes.topTouchMove
-  );
+  ];
 }
 
 var eventTypes = {
   touchTap: {
     phasedRegistrationNames: {
-      bubbled: keyOf({onTouchTap: null}),
+      bubbled: keyOf({onTap: null}),
       captured: keyOf({onTouchTapCapture: null})
     },
     dependencies: dependencies
